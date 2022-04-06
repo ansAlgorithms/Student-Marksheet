@@ -7,7 +7,7 @@ let x = date.getHours();
 
 module.exports = {
     student : async(req,res)=>{
-        cron.schedule('30 * * * *', () => {
+        cron.schedule('30,00 * * * *', () => {
             Student.findOneAndUpdate({_id:req.params.id},{
                 $set:{
                     FirstName: req.body.first_name,
@@ -27,7 +27,7 @@ module.exports = {
         res.json({message : `Updating... Data will be updated at ${x}:30`})
     },
     marks : async(req,res)=>{
-        cron.schedule('30 * * * *', () => {
+        cron.schedule('30,00 * * * *', () => {
             Marks.findOneAndUpdate({_id:req.params.id},{
                 $set:{
                     RollNo: req.body.roll_no,
