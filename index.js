@@ -1,5 +1,5 @@
 const express = require('express'); // importing express
-const app = express();  // importing expres
+const app = express();  
 const dotenv = require('dotenv');  //importing Dotenv
 const mongoose = require('mongoose') // importing MongoDB
 
@@ -21,7 +21,7 @@ app.use(express.json());
 
 
 // route middleware
-app.use('/api/stud',studRoutes); // It will connect to studRoutes.
+app.use('/api/stud',studRoutes); 
 app.use('/api/marks',marksRoutes);
 app.use('/api/join',joinRoutes);
 
